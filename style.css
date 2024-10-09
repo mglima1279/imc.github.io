@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    background-image: url(bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+}
+
+h1{
+    font-size: 3vw;
+    text-align: center;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"]{
+    padding: 3% 4%;
+
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    width: 100%;
+}
+
+
+input[type="text"],
+input[type="number"],
+.radio label{
+    font-size: 1vw;
+}
+
+.form-container{
+    width: 45%;
+
+    margin: 0 auto;
+    padding: 3% 5%;
+
+    background-color: #f2f2f23b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.line-form-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    font-size: 2.5vw;
+
+    padding: 2%;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.212);
+    background-color: #4CAF50;
+
+    color: #fff;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #45a049;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.212);
+    transform: translateY(-2px);
+}
+
+.result{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: none;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+
+    border-radius: 20px;
+    background-color: rgb(102, 57, 57);
+    color: white;
+
+    font-size: 2vw;
+    text-align: center;
+
+    padding: 2% 1%;
+}
+
+.sac{
+    background-color: #f2f2f23b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+    backdrop-filter: blur(10px);
+
+    padding: 1%;
+
+    color: white !important;
+
+    font-size: 2vw;
+    text-decoration: none;
+
+    position: absolute;
+    left: 2%;
+    top: 2%;
+}

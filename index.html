@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container" id="form">
+        <h1>Calculadora IMC</h1>
+
+        <div class="form-item">
+            <input type="text" id="name" placeholder="Nome">
+        </div>
+
+        <div class="line-form-item">
+            <div class="radio">
+                <input type="radio" name="sex" id="male">
+                <label for="male">Masculino</label>
+            </div>
+
+            <div class="radio">
+                <input type="radio" name="sex" id="female">
+                <label for="female">Feminino</label>
+            </div>
+        </div>
+
+        <div class="form-item">
+            <input type="number" id="weight" placeholder="Peso (Kg)">
+        </div>
+        
+        <div class="form-item">
+            <input type="number" id="height" placeholder="Altura ">
+        </div>
+
+        <div class="form-item">
+            <button onclick="calculateIMC()">Calcular</button>
+        </div>
+    </div>
+
+    <div class="result" id="result">
+        <h2>Nome - <span id="result-name"></span></h2>
+        <h3>Condição - <span id="cond"></span></h3>
+        <h3>IMC - <span id="imc"></span></h3>
+        <h3>Meta de peso - <span id="peso"></span></h3>
+        <button onclick="clearForm()"></button>
+    </div>
+
+    <a href="SAC/" class="sac">Fale Conosco</a>
+
+    <script src="app.js"></script>
+</body>
+</html>
