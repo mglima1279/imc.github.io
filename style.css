@@ -36,7 +36,7 @@ input[type="number"]{
 
     width: 100%;
 
-    color: black;
+    color: black !important;
 }
 
 
