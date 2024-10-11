@@ -15,7 +15,7 @@ function calculateIMC(){
         height = parseFloat(document.getElementById('height').value)
     ;
 
-    var imc = weight / Math.pow(height/100, 2);
+    var imc = weight / Math.pow(height / 100, 2);
 
     switch(sex){
         case "M":
@@ -49,7 +49,9 @@ function fim(nameFin, conditionFin, imcFin, weightToNormalFin) {
     nameSlot.innerHTML = nameFin;
     imcSlot.innerHTML = imcFin.toFixed(1);
     conditionSlot.innerHTML = conditionFin;
-    pesoSlot.innerHTML = weightToNormalFin >= 0 ? `Você precisa ganhar ${weightToNormalFin.toFixed(1)} kg para alcançar o peso normal.` : `Você precisa perder ${(-weightToNormalFin).toFixed(1)} kg para alcançar o peso normal.`;
+    pesoSlot.innerHTML = weightToNormalFin >= 0 ? 
+        `Você precisa ganhar ${weightToNormalFin.toFixed(1)} kg para alcançar o peso normal.` : 
+        `Você precisa perder ${(-weightToNormalFin).toFixed(1)} kg para alcançar o peso normal.`;
 }
 
 function calcM(imc, weight, height){
@@ -61,13 +63,13 @@ function calcM(imc, weight, height){
         weightToNormal = 0;
     } else if(imc <= 27.8){
         condition = "Pouco acima do peso";
-        weightToNormal = 0;
+        weightToNormal = weight - (26.4 * Math.pow(height / 100, 2));
     } else if(imc <= 31.1){
         condition = "Acima do peso";
-        weightToNormal = 0;
+        weightToNormal = weight - (26.4 * Math.pow(height / 100, 2));
     } else{
         condition = "Obesidade";
-        weightToNormal = 0;
+        weightToNormal = weight - (26.4 * Math.pow(height / 100, 2));
     }
 }
 
@@ -80,12 +82,12 @@ function calcF(imc, weight, height){
         weightToNormal = 0;
     } else if(imc <= 27.3){
         condition = "Pouco acima do peso";
-        weightToNormal = 0;
+        weightToNormal = weight - (25.8 * Math.pow(height / 100, 2));
     } else if(imc <= 32.3){
         condition = "Acima do peso";
-        weightToNormal = 0;
+        weightToNormal = weight - (25.8 * Math.pow(height / 100, 2));
     } else{
         condition = "Obesidade";
-        weightToNormal = 0;
+        weightToNormal = weight - (25.8 * Math.pow(height / 100, 2));
     }
 }
